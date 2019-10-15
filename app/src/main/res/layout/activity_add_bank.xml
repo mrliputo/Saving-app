@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBankActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/saving_info"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In actual bank"
+                    android:textStyle="italic"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 200,000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/update_type"
+            android:layout_marginTop="40dp"
+            android:text="How much do you want to add? (* Rp. 1,000)"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/saving_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:gravity="end"
+            android:id="@+id/editText"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/update_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="number"
+            android:background="@drawable/edit_text_green"/>
+
+
+        <Button
+            android:onClick="saveData"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="save"/>
+
+    </RelativeLayout>
+
+</ScrollView>
